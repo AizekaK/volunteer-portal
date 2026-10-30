@@ -1,0 +1,79 @@
+/* Portal for an Ecological Volunteer Movement
+   Mobile-first: base rules are for phones; @media (min-width: 1024px) adds the desktop layout. */
+:root{--bg:#f4faf5;--surface:#ffffff;--text:#14261a;--muted:#3d5244;--primary:#1b6b3a;--on-primary:#ffffff;--border:#c9dccd;--field:#5b7563;--chip:#dff1e4;--accent:#ffd54a;--on-accent:#1a1a00;--error:#b3261e;--gutter:max(1rem,calc((100% - 75rem) / 2));color-scheme:light}
+/* Dark theme: the checkbox in the footer switches it, no JavaScript */
+:root:has(#theme:checked){--bg:#0f1a13;--surface:#172a1d;--text:#e8f3ea;--muted:#b4c9b9;--primary:#4cc46f;--on-primary:#06210f;--border:#2f4a38;--field:#7da088;--chip:#24402d;--error:#ff8a80;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.6;background:var(--bg);color:var(--text)}
+img{display:block;max-width:100%}
+a{color:var(--primary)}
+h1,h2,h3{line-height:1.2;margin:0 0 1rem}
+h2{font-size:1.75rem}
+h3{font-size:1.125rem;margin-bottom:.5rem}
+p{margin:0 0 1rem}
+.sr{position:absolute;width:.0625rem;height:.0625rem;margin:0;opacity:0;pointer-events:none}
+
+header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.75rem var(--gutter);background:var(--surface);border-bottom:.0625rem solid var(--border)}
+.brand{display:flex;align-items:center;gap:.75rem;min-width:0;color:var(--text);font-size:.8125rem;font-weight:700;line-height:1.3;text-decoration:none}
+.brand img{flex:none;width:2.5rem;height:2.5rem}
+header nav ul{display:flex;flex-direction:column;gap:.25rem;margin:0;padding:0;list-style:none}
+header nav a{display:flex;align-items:center;min-height:3rem;padding:0 .75rem;border-radius:.75rem;color:var(--text);font-weight:600;text-decoration:none}
+header nav a:hover{background:var(--chip)}
+
+main>section{padding:3rem var(--gutter)}
+.hero{display:grid;align-content:end;justify-items:start;gap:1.5rem;min-height:85vh;padding:2rem var(--gutter) 3rem;color:#fff;background:linear-gradient(rgba(5,30,15,.55),rgba(5,30,15,.7)),url("images/hero.svg") center/cover no-repeat}
+main>.hero{padding:2rem var(--gutter) 3rem}
+.hero h1{margin:0;font-size:clamp(2.25rem,9vw,4rem);font-weight:800}
+.cta{display:flex;align-items:center;justify-content:center;width:100%;min-height:3.5rem;padding:.75rem 1.5rem;border-radius:1rem;background:var(--accent);color:var(--on-accent);font-weight:700;text-align:center;text-decoration:none;box-shadow:0 .5rem 1.5rem rgba(0,0,0,.35)}
+.cta:hover{filter:brightness(1.08)}
+.cta:focus-visible{outline:.1875rem solid #fff;outline-offset:.25rem}
+
+.cards,.tips{display:grid;grid-template-columns:1fr;gap:1.5rem;margin:1.5rem 0 0;padding:0;list-style:none}
+.tips{gap:.75rem}
+.cards>li,.tips>li{min-width:0}
+.cards article,.tips li{height:100%;padding:1.25rem;border:.0625rem solid var(--border);border-radius:1rem;background:var(--surface)}
+.cards address{font-style:normal}
+.cards p{margin:.5rem 0 1rem;color:var(--muted)}
+.fractions{display:flex;flex-wrap:wrap;gap:.5rem;margin:0;padding:0;list-style:none}
+.fractions li{padding:.125rem .75rem;border-radius:2rem;background:var(--chip);font-size:.8125rem;font-weight:500}
+
+form{display:grid;grid-template-columns:1fr;gap:1.25rem;margin-top:1.5rem}
+label{display:grid;gap:.375rem;font-weight:700}
+input,select{width:100%;min-width:0;min-height:3rem;padding:.5rem .75rem;border:.125rem solid var(--field);border-radius:.75rem;background:var(--surface);color:var(--text);font:inherit;font-weight:400}
+input:focus-visible,select:focus-visible,button:focus-visible{outline:.1875rem solid var(--primary);outline-offset:.125rem}
+/* validation shown with pure CSS */
+input:user-invalid,select:user-invalid{border-color:var(--error)}
+input:user-valid,select:user-valid{border-color:var(--primary)}
+label:not(.check):has(:user-invalid)::after{content:"Please fill in this field correctly";color:var(--error);font-size:.875rem;font-weight:400}
+.check{display:flex;align-items:center;gap:.75rem;grid-column:1/-1;font-weight:400}
+.check input{flex:none;width:1.5rem;min-height:1.5rem;height:1.5rem;accent-color:var(--primary)}
+button{grid-column:1/-1;min-height:3.5rem;padding:.75rem 1.5rem;border:0;border-radius:1rem;background:var(--primary);color:var(--on-primary);font:inherit;font-weight:700;cursor:pointer}
+button:hover{filter:brightness(1.1)}
+
+footer{position:relative;display:grid;grid-template-columns:1fr;gap:2rem 1.5rem;padding:3rem var(--gutter);border-top:.0625rem solid var(--border);background:var(--surface)}
+footer h2{margin-bottom:.75rem;font-size:1.125rem}
+footer ul{display:grid;gap:.5rem;margin:0;padding:0;list-style:none}
+footer p{margin:0}
+footer small{color:var(--muted);font-size:.8125rem}
+footer nav a{display:inline-flex;align-items:center;min-height:2.75rem}
+.stats strong{color:var(--primary);font-size:1.25rem}
+.switch{display:inline-flex;align-items:center;gap:.75rem;min-height:3rem;font-weight:600;cursor:pointer}
+.track{position:relative;flex:none;width:3.25rem;height:1.75rem;border-radius:2rem;background:var(--field)}
+.track::after{content:"";position:absolute;top:.25rem;left:.25rem;width:1.25rem;height:1.25rem;border-radius:50%;background:var(--surface);transition:transform .2s}
+:root:has(#theme:checked) .track::after{transform:translateX(1.5rem)}
+footer:has(#theme:focus-visible) .switch{outline:.1875rem solid var(--primary);outline-offset:.25rem;border-radius:.5rem}
+
+@media (min-width: 1024px){
+  h2{font-size:2.25rem}
+  header{padding-block:1rem}
+  .brand{font-size:1rem}
+  .burger{display:none}
+  header nav{display:block;position:static;padding:0;border:0;background:none}
+  header nav ul{flex-direction:row;gap:.5rem}
+  .hero{min-height:75vh}
+  .cta{width:auto;min-width:27.5rem}
+  .cards{grid-template-columns:repeat(4,1fr)}
+  form{grid-template-columns:repeat(2,1fr)}
+  footer{grid-template-columns:repeat(4,1fr)}
+}
