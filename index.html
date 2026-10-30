@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portal for an Ecological Volunteer Movement</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="#top"><img src="images/logo.svg" alt="International recycling symbol"><span>Portal for an Ecological Volunteer Movement</span></a>
+  <input type="checkbox" id="menu" class="sr" aria-label="Open menu">
+  <label class="burger" for="menu"><span></span><span></span><span></span></label>
+  <nav aria-label="Main">
+    <ul>
+      <li><a href="#actions">Eco-Actions</a></li>
+      <li><a href="#points">Collection Points</a></li>
+      <li><a href="#tips">Eco-Tips</a></li>
+      <li><a href="#volunteer">Become a Volunteer</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="top">
+  <section class="hero">
+    <h1>Let's Make Our City Cleaner Together</h1>
+    <a class="cta" href="#volunteer">I Want to Join the Clean-up Day</a>
+  </section>
+  <section id="actions">
+    <h2>Eco-Actions</h2>
+    <p>Join our regular clean-up days, courtyard sorting workshops and school lessons. Every action is led by volunteers and is open to everyone.</p>
+  </section>
+  <section id="points">
+    <h2>Collection Points</h2>
+    <ul class="cards">
+      <li><article>
+        <h3>Central Point</h3>
+        <address>12 Green Street, Central District</address>
+        <p>Mon–Sat, 09:00–19:00</p>
+        <ul class="fractions"><li>Polymers</li><li>Glass</li><li>Paper</li></ul>
+      </article></li>
+      <li><article>
+        <h3>Riverside Point</h3>
+        <address>5 River Embankment, Riverside District</address>
+        <p>Daily, 08:00–20:00</p>
+        <ul class="fractions"><li>Polymers</li><li>Paper</li></ul>
+      </article></li>
+      <li><article>
+        <h3>Park Point</h3>
+        <address>27 Park Avenue, North District</address>
+        <p>Tue, Thu, Sat, 10:00–16:00</p>
+        <ul class="fractions"><li>Glass</li><li>Paper</li></ul>
+      </article></li>
+      <li><article>
+        <h3>School Point</h3>
+        <address>3 School Lane, East District</address>
+        <p>Mon–Fri, 14:00–18:00</p>
+        <ul class="fractions"><li>Polymers</li><li>Glass</li></ul>
+      </article></li>
+    </ul>
+  </section>
+  <section id="tips">
+    <h2>Eco-Tips</h2>
+    <ul class="tips">
+      <li>Rinse containers before recycling.</li>
+      <li>Flatten paper and cardboard and keep it dry.</li>
+      <li>Take glass bottles without caps to the collection point.</li>
+    </ul>
+  </section>
+  <section id="volunteer">
+    <h2>Become a Volunteer</h2>
+    <p>Fill in the questionnaire and we will contact you about the next Clean-up Day.</p>
+    <form action="#" method="post">
+      <label>Name<input type="text" name="name" autocomplete="name" required minlength="2" placeholder="Your full name"></label>
+      <label>Age<input type="number" name="age" min="14" max="100" inputmode="numeric" required placeholder="e.g. 25"></label>
+      <label>District<input type="text" name="district" required placeholder="Your district"></label>
+      <label>Email<input type="email" name="email" autocomplete="email" required placeholder="name@example.com"></label>
+      <label>Phone<input type="tel" name="phone" autocomplete="tel" required pattern="[0-9+ \(\)\-]{7,}" placeholder="+7 700 000 00 00"></label>
+      <label>Competency
+        <select name="competency" required>
+          <option value="" selected disabled>Choose a competency</option>
+          <option value="transport">Transport</option>
+          <option value="resources">Resources</option>
+          <option value="manual-labor">Manual labor</option>
+        </select>
+      </label>
+      <label class="check"><input type="checkbox" name="consent" required> I agree to be contacted about volunteer activities</label>
+      <button type="submit">Send application</button>
+    </form>
+  </section>
+</main>
+<footer>
+  <section>
+    <h2>Recycling statistics</h2>
+    <ul class="stats">
+      <li><strong>12,480 kg</strong> of paper collected</li>
+      <li><strong>8,350 kg</strong> of glass collected</li>
+      <li><strong>5,920 kg</strong> of polymers collected</li>
+      <li><strong>1,240</strong> volunteers registered</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Environmental funds</h2>
+    <nav aria-label="Environmental funds">
+      <ul>
+        <li><a href="https://www.wwf.org" target="_blank" rel="noopener">WWF</a></li>
+        <li><a href="https://www.greenpeace.org" target="_blank" rel="noopener">Greenpeace</a></li>
+        <li><a href="https://www.ellenmacarthurfoundation.org" target="_blank" rel="noopener">Ellen MacArthur Foundation</a></li>
+      </ul>
+    </nav>
+  </section>
+  <section>
+    <h2>Appearance</h2>
+    <input type="checkbox" id="theme" class="sr" aria-label="Dark mode">
+    <label class="switch" for="theme"><span class="track"></span>Light / Dark mode</label>
+  </section>
+  <section>
+    <h2>Legal information</h2>
+    <p><small>© 2026 Portal for an Ecological Volunteer Movement. Non-profit community project. Form data is used only to contact applicants.</small></p>
+  </section>
+</footer>
+</body>
+</html>
